@@ -1,1 +1,0 @@
-{"mappings":"YACAA,QAAQC,IADK,aCCbD,QAAQC,IADQ,e","sources":["src/js/header.js","src/js/footer.js"],"sourcesContent":["const TEST = 'PRIMUL JS';\nconsole.log(TEST);\n","const TESTARE = 'AL DOILEA JS';\nconsole.log(TESTARE);\n"],"names":["console","log"],"version":3,"file":"index.70b034ab.js.map"}
