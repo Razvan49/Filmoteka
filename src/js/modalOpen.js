@@ -18,18 +18,14 @@ const openModal = async movieId => {
 
     if (watchedMovies.includes(movieId)) {
       watchedButton.innerText = 'Watched';
-      watchedClicked = true;
     } else {
       watchedButton.innerText = 'Add to Watched';
-      watchedClicked = false;
     }
 
     if (queuedMovies.includes(movieId)) {
       queueButton.innerText = 'Queued';
-      queueClicked = true;
     } else {
       queueButton.innerText = 'Add to Queue';
-      queueClicked = false;
     }
 
     const roundedVoteAverage = parseFloat(movieDetails.vote_average).toFixed(1);
