@@ -1,6 +1,7 @@
 import { getGenres } from './fetchGenreList';
 import { clearGallery } from './clearGallery';
 import { getGalleryElement } from './clearGallery';
+import { openModal } from './modalOpen';
 
 const nullPoster =
   'https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg';
@@ -23,6 +24,16 @@ const handleResponse = (data, isSearch = false, genreList) => {
     .map((result, index) => markupGalleryItem(result, genreList))
     .join('');
   galleryElement.insertAdjacentHTML('beforeend', markup);
+
+  // Adăugați evenimentul de ascultare pentru fiecare element din galerie
+  const galleryItems = galleryElement.querySelectorAll('.gallery__items');
+  galleryItems.forEach(item => {
+    item.addEventListener('click', () => {
+      // Obțineți ID-ul filmului selectat
+      const movieId = item.getAttribute('data-id');
+      openModal(movieId); // Apelați o funcție care deschide modalul cu detaliile filmului
+    });
+  });
 };
 
 // Funcția generează HTML pentru fiecare element din galerie.
