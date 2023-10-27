@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Modal Test</title>
+    <!-- Flickity -->
+    <link rel="stylesheet" href="./flickity.css" media="screen" />
+  </head>
+  <body>
+    <!-- Open Button -->
+    <div class="content">
+      <div class="buttons">
+        <div id="one" class="members-modal-button">Test</div>
+      </div>
+    </div>
+
+    <!--  -->
+
+    <div id="modal-container">
+      <div class="modal-background">
+        <div class="modal">
+          <div class="main__modal__container">
+            <span class="main__modal__container__close-button"> &times; </span>
+
+            <h2>
+              THE
+              <img height="32" src="./img/goit-logo.png" />
+              STUDENTS
+            </h2>
+
+            <!-- PC People Cards -->
+            <div class="main__modal__container__people">
+              <div class="main__modal__container__people--1">
+                <figure>
+                  <img src="./img/daniel.jpg" alt="Daniel" />
+                  <figcaption>
+                    Predescu Daniel Constantin<br /><span>Developer</span>
+
+                    <br />
+                    <a
+                      href="https://www.linkedin.com/"
+                      target="blank"
+                      rel="nofollow noopener noreferrer"
+                    >
+                      <svg width="40" height="40">
+                        <use href="./img/icons.svg#linkedin"></use>
+                      </svg>
+                    </a>
+                    <a
+                      href="https://www.github.com/"
+                      target="blank"
+                      rel="nofollow noopener noreferrer"
+                    >
+                      <svg width="40" height="40">
+                        <use href="./img/icons.svg#github"></use>
+                      </svg>
+                    </a>
+                  </figcaption>
+                </figure>
+              </div>
+
+              <div class="main__modal__container__people--2">
+                <figure>
+                  <img src="./img/danielCP.jpg" alt="DanielCP" />
+                  <figcaption>
+                    Daniel Purghel<br /><span>Developer</span>
+
+                    <br />
+                    <a
+                      href="https://www.linkedin.com/"
+                      target="blank"
+                      rel="nofollow noopener noreferrer"
+                    >
+                      <svg width="40" height="40">
+                        <use href="./img/icons.svg#linkedin"></use>
+                      </svg>
+                    </a>
+                    <a
+                      href="https://www.github.com/"
+                      target="blank"
+                      rel="nofollow noopener noreferrer"
+                    >
+                      <svg width="40" height="40">
+                        <use href="./img/icons.svg#github"></use>
+                      </svg>
+                    </a>
+                  </figcaption>
+                </figure>
+              </div>
+
+              <div class="main__modal__container__people--3">
+                <figure>
+                  <img src="./img/razvan.jpg" alt="Razvan" />
+                  <figcaption>
+                    Răzvan Pavel<br /><span>Team Leader</span>
+
+                    <br />
+                    <a
+                      href="https://www.linkedin.com/"
+                      target="blank"
+                      rel="nofollow noopener noreferrer"
+                    >
+                      <svg width="40" height="40">
+                        <use href="./img/icons.svg#linkedin"></use>
+                      </svg>
+                    </a>
+                    <a
+                      href="https://www.github.com/"
+                      target="blank"
+                      rel="nofollow noopener noreferrer"
+                    >
+                      <svg width="40" height="40">
+                        <use href="./img/icons.svg#github"></use>
+                      </svg>
+                    </a>
+                  </figcaption>
+                </figure>
+              </div>
+
+              <div class="main__modal__container__people--4">
+                <figure>
+                  <img src="./img/mihai.jpg" alt="Mihai" />
+                  <figcaption>
+                    Andrei-Bogdan<br />Mihai<br /><span>Scrum Master</span>
+
+                    <br />
+                    <a
+                      href="https://www.linkedin.com/"
+                      target="blank"
+                      rel="nofollow noopener noreferrer"
+                    >
+                      <svg width="40" height="40">
+                        <use href="./img/icons.svg#linkedin"></use>
+                      </svg>
+                    </a>
+                    <a
+                      href="https://www.github.com/"
+                      target="blank"
+                      rel="nofollow noopener noreferrer"
+                    >
+                      <svg width="40" height="40">
+                        <use href="./img/icons.svg#github"></use>
+                      </svg>
+                    </a>
+                  </figcaption>
+                </figure>
+              </div>
+
+              <div class="main__modal__container__people--5">
+                <figure>
+                  <img src="./img/marius.jpeg" alt="Marius" />
+                  <figcaption>
+                    Marius Toma<br /><span>Developer</span>
+
+                    <br />
+                    <a
+                      href="https://www.linkedin.com/"
+                      target="blank"
+                      rel="nofollow noopener noreferrer"
+                    >
+                      <svg width="40" height="40">
+                        <use href="./img/icons.svg#linkedin"></use>
+                      </svg>
+                    </a>
+                    <a
+                      href="https://www.github.com/"
+                      target="blank"
+                      rel="nofollow noopener noreferrer"
+                    >
+                      <svg width="40" height="40">
+                        <use href="./img/icons.svg#github"></use>
+                      </svg>
+                    </a>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+
+            <!-- Mobile/Tablet People Cards -->
+            <div class="gallery js-flickity">
+              <div class="gallery-cell">
+                <figure class="main__modal__container__member--1">
+                  <img src="./img/daniel.jpg" alt="Daniel" />
+                  <figcaption>
+                    Daniel Purghel<br /><span>Developer</span>
+
+                    <br />
+                    <a
+                      href="https://www.linkedin.com/"
+                      target="blank"
+                      rel="nofollow noopener noreferrer"
+                    >
+                      <svg width="40" height="40">
+                        <use href="./img/icons.svg#linkedin"></use>
+                      </svg>
+                    </a>
+                    <a
+                      href="https://www.github.com/"
+                      target="blank"
+                      rel="nofollow noopener noreferrer"
+                    >
+                      <svg width="40" height="40">
+                        <use href="./img/icons.svg#github"></use>
+                      </svg>
+                    </a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="gallery-cell">
+                <figure class="main__modal__container__member--2">
+                  <img src="./img/danielCP.jpg" alt="Daniel" />
+                  <figcaption>
+                    Predescu Daniel Constantin<br /><span>Developer</span>
+
+                    <br />
+                    <a
+                      href="https://www.linkedin.com/"
+                      target="blank"
+                      rel="nofollow noopener noreferrer"
+                    >
+                      <svg width="40" height="40">
+                        <use href="./img/icons.svg#linkedin"></use>
+                      </svg>
+                    </a>
+                    <a
+                      href="https://www.github.com/"
+                      target="blank"
+                      rel="nofollow noopener noreferrer"
+                    >
+                      <svg width="40" height="40">
+                        <use href="./img/icons.svg#github"></use>
+                      </svg>
+                    </a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="gallery-cell">
+                <figure class="main__modal__container__member--3">
+                  <img src="./img/razvan.jpg" alt="Razvan" />
+                  <figcaption>
+                    Pavel Petre Cristian<br /><span>Team Leader</span>
+
+                    <br />
+                    <a
+                      href="https://www.linkedin.com/"
+                      target="blank"
+                      rel="nofollow noopener noreferrer"
+                    >
+                      <svg width="40" height="40">
+                        <use href="./img/icons.svg#linkedin"></use>
+                      </svg>
+                    </a>
+                    <a
+                      href="https://www.github.com/"
+                      target="blank"
+                      rel="nofollow noopener noreferrer"
+                    >
+                      <svg width="40" height="40">
+                        <use href="./img/icons.svg#github"></use>
+                      </svg>
+                    </a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="gallery-cell">
+                <figure class="main__modal__container__member--4">
+                  <img src="./img/mihai.jpg" alt="Mihai" />
+                  <figcaption>
+                    Andrei-Bogdan Mihai<br /><span>Scrum Master</span>
+
+                    <br />
+                    <a
+                      href="https://www.linkedin.com/"
+                      target="blank"
+                      rel="nofollow noopener noreferrer"
+                    >
+                      <svg width="40" height="40">
+                        <use href="./img/icons.svg#linkedin"></use>
+                      </svg>
+                    </a>
+                    <a
+                      href="https://www.github.com/"
+                      target="blank"
+                      rel="nofollow noopener noreferrer"
+                    >
+                      <svg width="40" height="40">
+                        <use href="./img/icons.svg#github"></use>
+                      </svg>
+                    </a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="gallery-cell">
+                <figure class="main__modal__container__member--5">
+                  <img src="./img/marius.jpeg" alt="Marius" />
+                  <figcaption>
+                    Marius Toma<br /><span>Developer</span>
+
+                    <br />
+                    <a
+                      href="https://www.linkedin.com/"
+                      target="blank"
+                      rel="nofollow noopener noreferrer"
+                    >
+                      <svg width="40" height="40">
+                        <use href="./img/icons.svg#linkedin"></use>
+                      </svg>
+                    </a>
+                    <a
+                      href="https://www.github.com/"
+                      target="blank"
+                      rel="nofollow noopener noreferrer"
+                    >
+                      <svg width="40" height="40">
+                        <use href="./img/icons.svg#github"></use>
+                      </svg>
+                    </a>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/members-modal.js"></script>
+
+    <!-- Flickity -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"></script>
+  </body>
+</html>

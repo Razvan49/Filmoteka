@@ -1,5 +1,6 @@
 import '../src/js/header';
 import '../src/js/footer';
+import './js/members-modal';
 
 import { fetchGenreList } from './js/fetchGenreList';
 import { showPage } from './js/pageBuilder';
