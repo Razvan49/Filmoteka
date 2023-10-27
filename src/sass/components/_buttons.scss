@@ -55,3 +55,18 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
+
+//FOOTER
+
+.footer__main__button {
+  background: none;
+  border: none;
+  padding: 14px 28px;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    outline: none;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
