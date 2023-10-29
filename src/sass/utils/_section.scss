@@ -1,20 +1,10 @@
 // GLOBAL
 
 .section {
-  width: 480px;
-  margin: auto;
-  padding: 60px 0;
-}
-
-@media screen and (min-width: $tablet-breakpoint) {
-  .section {
-    width: 768px; /* Maximul pentru tabletă */
-  }
-}
-
-@media screen and (min-width: $desktop-breakpoint) {
-  .section {
-    width: 1600px; /* Maximul pentru desktop */
-    padding: 94px 0;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1280;
+  margin: 0 auto;
 }

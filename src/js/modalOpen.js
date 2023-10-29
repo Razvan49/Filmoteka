@@ -9,7 +9,7 @@ const openModal = async movieId => {
   try {
     // Obțineți detaliile complete ale filmului utilizând ID-ul
     const movieDetails = await fetchData(`/movie/${movieId}`);
-    const modal = document.querySelector('.modal');
+    const modal = document.querySelector('.modal-gallery');
     globalMovieId = movieId;
 
     // Verificăm dacă filmul este deja adăugat la "Watched" sau "Queue"
@@ -57,7 +57,8 @@ const openModal = async movieId => {
     `;
 
     // Afisez modalul
-    modal.classList.remove('is-hidden');
+
+    modal.classList.remove('gallery-is-hidden');
   } catch (error) {
     console.error('Error opening modal:', error);
   }
