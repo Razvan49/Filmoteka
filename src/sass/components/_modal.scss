@@ -1,6 +1,6 @@
 /* MODAL */
 
-.modal {
+.modal-gallery {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -14,7 +14,7 @@
   transition: var(--transition);
 }
 
-.is-hidden {
+.gallery-is-hidden {
   opacity: 0;
   visibility: hidden;
 }
