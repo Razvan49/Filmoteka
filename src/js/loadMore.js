@@ -12,11 +12,9 @@ const loadMoreMovies = async () => {
 
   try {
     // Afisez următoarea pagină folosind funcția showPage
-    window.scrollTo({ top: 0, behavior: 'smooth' }); // Acesta va face o mișcare lină către partea de sus a paginii
     await showPage(currentPage, false); // `false` indică că nu este o căutare, ci solicitarea pentru filme populare
     // Actualizați textul din div cu numărul paginii curente
     const currentPageDiv = document.getElementById('currentPage');
-    currentPageDiv.innerText = `Page ${currentPage}`;
   } catch (error) {
     console.error('Error loading more movies:', error);
   }
