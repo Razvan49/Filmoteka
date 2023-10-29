@@ -23,7 +23,9 @@ const loadMoreMovies = async () => {
 };
 
 // Adăugați un eveniment de ascultare pentru clic pe butonul "Load More"
-loadMoreButton.addEventListener('click', loadMoreMovies);
+if (loadMoreButton) {
+  loadMoreButton.addEventListener('click', loadMoreMovies);
+}
 
 // Exportați funcția loadMoreMovies pentru a o face disponibilă pentru import
 export { loadMoreMovies };

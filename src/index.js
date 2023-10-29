@@ -25,4 +25,6 @@ startingPagination(); // Apelul funcției de inițializare a aplicației
 
 // Adăugați un eveniment de ascultare pentru clic pe butonul "Load More"
 const loadMoreButton = document.querySelector('.load-more');
-loadMoreButton.addEventListener('click', loadMoreMovies); // Când se face clic pe buton, se apelează funcția loadMoreMovies
+if (loadMoreButton) {
+  loadMoreButton.addEventListener('click', loadMoreMovies); // Când se face clic pe buton, se apelează funcția loadMoreMovies
+}

@@ -6,6 +6,10 @@ import { handleResponse } from './galleryBuilder';
 
 const form = document.querySelector('.search-form');
 
+if (!form) {
+  return;
+}
+
 const api = new TheMovieDbApi();
 
 form.addEventListener('submit', onSearchFormSubmit);
