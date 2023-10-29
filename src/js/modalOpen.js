@@ -57,6 +57,7 @@ const openModal = async movieId => {
     `;
 
     // Afisez modalul
+
     modal.classList.remove('gallery-is-hidden');
   } catch (error) {
     console.error('Error opening modal:', error);

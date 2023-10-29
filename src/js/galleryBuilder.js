@@ -7,8 +7,6 @@ const nullPoster =
   'https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg';
 
 // Funcția se ocupă de manipularea răspunsului API și afișarea datelor în galerie.
-// ...
-
 const handleResponse = (data, shouldClearGallery = true, genreList) => {
   const galleryElement = getGalleryElement();
   if (!galleryElement) {
