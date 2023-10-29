@@ -7,31 +7,30 @@ const nullPoster =
   'https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg';
 
 // Funcția se ocupă de manipularea răspunsului API și afișarea datelor în galerie.
-const handleResponse = (data, isSearch = false, genreList) => {
-  if (!data.results) {
-    console.error('Invalid API response');
-    return;
-  }
+// ...
 
-  clearGallery();
-
+const handleResponse = (data, shouldClearGallery = true, genreList) => {
   const galleryElement = getGalleryElement();
   if (!galleryElement) {
     return;
   }
 
+  if (shouldClearGallery) {
+    clearGallery();
+  }
+
   const markup = data.results
     .map((result, index) => markupGalleryItem(result, genreList))
     .join('');
+
   galleryElement.insertAdjacentHTML('beforeend', markup);
 
   // Adăugați evenimentul de ascultare pentru fiecare element din galerie
   const galleryItems = galleryElement.querySelectorAll('.gallery__items');
   galleryItems.forEach(item => {
     item.addEventListener('click', () => {
-      // Obțineți ID-ul filmului selectat
       const movieId = item.getAttribute('data-id');
-      openModal(movieId); // Apelați o funcție care deschide modalul cu detaliile filmului
+      openModal(movieId);
     });
   });
 };
