@@ -1,7 +1,5 @@
 import '../src/js/header';
 import '../src/js/footer';
-<<<<<<< Updated upstream
-=======
 import './js/movieButtons';
 
 import { fetchGenreList } from './js/fetchGenreList';
@@ -28,4 +26,3 @@ startingPagination(); // Apelul funcției de inițializare a aplicației
 // Adăugați un eveniment de ascultare pentru clic pe butonul "Load More"
 const loadMoreButton = document.querySelector('.load-more');
 loadMoreButton.addEventListener('click', loadMoreMovies); // Când se face clic pe buton, se apelează funcția loadMoreMovies
->>>>>>> Stashed changes
