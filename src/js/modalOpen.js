@@ -17,15 +17,19 @@ const openModal = async movieId => {
     const queuedMovies = getFromLocalStorage('queuedMovies');
 
     if (watchedMovies.includes(movieId)) {
+      watchedButton.classList.add('modal_watched_active');
       watchedButton.innerText = 'Watched';
     } else {
+      watchedButton.classList.remove('modal_watched_active');
       watchedButton.innerText = 'Add to Watched';
     }
 
     if (queuedMovies.includes(movieId)) {
       queueButton.innerText = 'Queued';
+      queueButton.classList.add('modal_queue_active');
     } else {
       queueButton.innerText = 'Add to Queue';
+      queueButton.classList.remove('modal_queue_active');
     }
 
     const roundedVoteAverage = parseFloat(movieDetails.vote_average).toFixed(1);

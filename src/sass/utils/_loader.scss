@@ -1,0 +1,47 @@
+.loader {
+  display: block;
+  margin: 10px auto;
+  height: 10px;
+  width: 140px;
+  background-image: linear-gradient(#fff 10px, transparent 0),
+    linear-gradient(#fff 10px, transparent 0),
+    linear-gradient(#fff 10px, transparent 0),
+    linear-gradient(#fff 10px, transparent 0);
+  background-repeat: no-repeat;
+  background-size: 10px auto;
+  background-position: 0 0, 40px 0, 70px 0, 100px 0;
+  animation: pgfill 1s linear infinite;
+}
+
+@keyframes pgfill {
+  0% {
+    background-image: linear-gradient(#fff 10px, transparent 0),
+      linear-gradient(#fff 10px, transparent 0),
+      linear-gradient(#fff 10px, transparent 0),
+      linear-gradient(#fff 10px, transparent 0);
+  }
+  25% {
+    background-image: linear-gradient(#ff3d00 10px, transparent 0),
+      linear-gradient(#fff 10px, transparent 0),
+      linear-gradient(#fff 10px, transparent 0),
+      linear-gradient(#fff 10px, transparent 0);
+  }
+  50% {
+    background-image: linear-gradient(#ff3d00 10px, transparent 0),
+      linear-gradient(#ff3d00 10px, transparent 0),
+      linear-gradient(#fff 10px, transparent 0),
+      linear-gradient(#fff 10px, transparent 0);
+  }
+  75% {
+    background-image: linear-gradient(#ff3d00 10px, transparent 0),
+      linear-gradient(#ff3d00 10px, transparent 0),
+      linear-gradient(#ff3d00 10px, transparent 0),
+      linear-gradient(#fff 10px, transparent 0);
+  }
+  100% {
+    background-image: linear-gradient(#ff3d00 10px, transparent 0),
+      linear-gradient(#ff3d00 10px, transparent 0),
+      linear-gradient(#ff3d00 10px, transparent 0),
+      linear-gradient(#ff3d00 10px, transparent 0);
+  }
+}
