@@ -1,6 +1,7 @@
 // NAVIGATION & BUTTONS
 .navigation {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
 }
 
@@ -107,7 +108,11 @@
   &:hover,
   &:focus {
     outline: none;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .search-form:first-child {
+    order: 3;
   }
 }
