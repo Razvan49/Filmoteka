@@ -31,4 +31,12 @@ const fetchMovieDetails = async movieId => {
   return fetchData(`/movie/${movieId}`, params); // Efectuează cererea pentru detalii de film
 };
 
-export { fetchPopularMovies, fetchMovieDetails };
+const fetchMoviesDetails = async ids => {
+  const arrayOfPromises = ids.map(async id => {
+    return await fetchMovieDetails(id);
+  });
+  const movies = await Promise.all(arrayOfPromises);
+  return movies;
+};
+
+export { fetchPopularMovies, fetchMovieDetails, fetchMoviesDetails };

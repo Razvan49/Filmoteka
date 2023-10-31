@@ -1,7 +1,6 @@
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 import TheMovieDbApi from './themoviedb-api';
-import { clearGallery } from './clearGallery';
 import { handleResponse } from './galleryBuilder';
 
 const form = document.querySelector('.search-form');
@@ -35,7 +34,6 @@ function onSearchFormSubmit(event) {
         );
       } else {
         Notify.success('Results found successfully.');
-        clearGallery(); // Șterge galeria înainte de a afișa rezultatele căutării
         handleResponse(res, true); // Afișează rezultatele căutării în galerie
       }
     })
