@@ -1,6 +1,6 @@
 import { getGenres } from './fetchGenreList';
-import { clearGallery } from './clearGallery';
-import { getGalleryElement } from './clearGallery';
+import { clearGallery, clearMyLibraryGallery } from './clearGallery';
+import { getGalleryElement, getMyLibraryGalleryElement } from './clearGallery';
 import { openModal } from './modalOpen';
 
 const nullPoster =
@@ -35,6 +35,55 @@ const handleResponse = (data, shouldClearGallery = true, genreList) => {
   });
 };
 
+const createMyLibraryGallery = moviesList => {
+  const myLibraryGalleryElement = getMyLibraryGalleryElement();
+  if (!myLibraryGalleryElement) {
+    return;
+  }
+
+  clearMyLibraryGallery();
+
+  const markup = moviesList
+    .map(result => markupMyLibraryGalleryItem(result))
+    .join('');
+
+  myLibraryGalleryElement.insertAdjacentHTML('beforeend', markup);
+
+  const galleryItems =
+    myLibraryGalleryElement.querySelectorAll('.gallery__items');
+  galleryItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const movieId = item.getAttribute('data-id');
+      openModal(movieId);
+    });
+  });
+};
+
+const markupMyLibraryGalleryItem = movie => {
+  const { title, release_date, poster_path, genres, id } = movie;
+  const coverUrl = poster_path
+    ? `https://image.tmdb.org/t/p/w500${poster_path}`
+    : nullPoster;
+  const year = release_date ? release_date.slice(0, 4) : 'N/A';
+
+  return `
+    <li class="gallery__items" data-id="${id}">
+      <div class="gallery__items__img">
+        <img src="${coverUrl}" alt="${title}" loading="lazy" />
+      </div>
+      <div class="gallery__items__details">
+        <p class="gallery__items__details--title">${title}</p>
+        <p class="gallery__items__details--genres">${genres
+          .map(g => g.name)
+          .join(
+            ', '
+          )} | <span class="gallery__items__details--year">${year}</span>
+      </p>
+      </div>
+    </li>
+  `;
+};
+
 // Funcția generează HTML pentru fiecare element din galerie.
 const markupGalleryItem = (result, genreList) => {
   const { title, release_date, poster_path, genre_ids, id } = result;
@@ -60,4 +109,9 @@ const markupGalleryItem = (result, genreList) => {
   `;
 };
 
-export { handleResponse, getGalleryElement, nullPoster };
+export {
+  handleResponse,
+  getGalleryElement,
+  nullPoster,
+  createMyLibraryGallery,
+};
