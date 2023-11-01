@@ -1,4 +1,6 @@
 import './movieButtons';
+import './members-modal';
+
 import { getFromLocalStorage } from './localStorage';
 import { fetchMoviesDetails } from './fetchMovieApi';
 import { createMyLibraryGallery } from './galleryBuilder';

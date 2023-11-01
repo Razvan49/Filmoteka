@@ -27,7 +27,6 @@ function onSearchFormSubmit(event) {
   api
     .getMoviesByName(queryString)
     .then(res => {
-      console.log(res);
       if (res.results.length < 1) {
         Notify.failure(
           'Search result not successful. Enter the correct movie name.'
