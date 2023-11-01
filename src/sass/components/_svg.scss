@@ -38,4 +38,18 @@
 /* Aplică animația elementului cu clasa .logo__svg */
 .logo__svg {
   animation: reverse-scale 4s infinite;
+  width: 32px;
+  height: 32px;
+}
+@media screen and (min-width: $tablet-breakpoint) {
+  .logo__svg {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media screen and (min-width: $desktop-breakpoint) {
+  .logo__svg {
+    width: 59px;
+    height: 59px;
+  }
 }
