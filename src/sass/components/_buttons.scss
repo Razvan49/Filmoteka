@@ -106,9 +106,9 @@
 // GALLERY MODAL
 
 .modal_watched {
-  width: 165px;
-  height: 42px;
-  padding: 14px 32px;
+  width: 125px;
+  height: 34px;
+  padding: 10px 12px;
   background: #fff;
   color: #b92f2c;
   border-radius: 100px;
@@ -136,9 +136,9 @@
 }
 
 .modal_queue {
-  width: 134px;
-  height: 42px;
-  padding: 14px 24px;
+  width: 111px;
+  height: 34px;
+  padding: 10px 14px;
   border-radius: 100px;
   background: #fff;
   color: #b92f2c;
@@ -266,5 +266,31 @@
 @media screen and (max-width: 480px) {
   .search-form:first-child {
     order: 3;
+  }
+}
+
+@media screen and (min-width: $tablet-breakpoint) {
+  .modal_watched {
+    width: 137px;
+    height: 38px;
+    padding: 12px 18px;
+  }
+  .modal_queue {
+    width: 119px;
+    height: 38px;
+    padding: 12px 18px;
+  }
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+  .modal_watched {
+    width: 165px;
+    height: 42px;
+    padding: 14px 32px;
+  }
+  .modal_queue {
+    width: 134px;
+    height: 42px;
+    padding: 14px 24px;
   }
 }

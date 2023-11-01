@@ -2,15 +2,14 @@
 .my-library-gallery {
   padding: 0;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  gap: 16px;
-  width: 100%;
+  gap: 20px;
   display: flex;
 }
 .gallery__items {
   border-radius: 5px;
-  width: 384px;
+  width: 280px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   cursor: pointer;
   &:hover,
@@ -21,29 +20,21 @@
     border: 5px solid #b92f2c;
   }
 }
-.gallery__items__img {
-  & img {
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-  }
-}
 
 .gallery__items__details {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  height: 100px;
+  height: 75px;
   margin-left: 10px;
-  margin-top: 10px;
   &--title {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 0;
     color: var(--title-color);
     font-family: var(--text-font-family);
-    font-size: 20px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 500;
-    line-height: 24px; /* 120% */
+    line-height: 16px; /* 120% */
     text-transform: uppercase;
   }
   &--genres {
@@ -51,9 +42,55 @@
     margin-bottom: 0;
     color: var(--select-color);
     font-family: var(--text-font-family);
-    font-size: 20px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 500;
     line-height: 24px;
+  }
+}
+
+@media screen and (min-width: $tablet-breakpoint) {
+  .gallery,
+  .my-library-gallery {
+    gap: 32px;
+  }
+  .gallery__items {
+    width: 335 px;
+  }
+  .gallery__items__details {
+    height: 75px;
+    &--title {
+      font-size: 12px;
+    }
+    &--genres {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      color: var(--select-color);
+      font-family: var(--text-font-family);
+      font-size: 12px;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+  .gallery__items {
+    width: 394px;
+  }
+  .gallery,
+  .my-library-gallery {
+    gap: 16px;
+  }
+  .gallery__items__details {
+    height: 120px;
+    margin-left: 12px;
+    &--title {
+      margin-top: 12px;
+      margin-bottom: 10px;
+      font-size: 20px;
+      line-height: 24px;
+    }
+    &--genres {
+      font-size: 20px;
+    }
   }
 }
