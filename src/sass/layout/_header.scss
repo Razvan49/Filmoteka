@@ -1,22 +1,26 @@
 .header {
   margin-left: auto;
   margin-right: auto;
+  margin-top: 20px;
   background-image: url('/src/images/header-background-img-m.png');
   // test
   background-image: image-set(
     '/src/images/header-background-img-m.png' 1x,
     '/src/images/header-background-img-m@2x.png' 2x
   );
+
   padding-top: 14px;
   padding-left: 14px;
   padding-bottom: 20px;
   padding-right: 14px;
-  width: 280px;
-  height: 460px;
+  width: 88%;
+  height: 430px;
 
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right;
+
+  border-radius: 20px;
 }
 
 .logo {
@@ -43,7 +47,7 @@
 }
 
 .logo--from-my-library {
-  margin-bottom: 54px;
+  margin-bottom: 26px;
   margin-top: 246px;
 }
 
@@ -65,7 +69,7 @@
   font-weight: 400;
   line-height: 1.17;
   border-color: transparent;
-  width: 252px;
+  width: 100%;
   height: 34px;
   border-width: 0px;
   padding-left: 14px;
@@ -100,10 +104,12 @@
   height: 14px;
 }
 
-@media screen and (min-width: $tablet-breakpoint) {
+// Tableta
+@media screen and (min-width: 426px) and (max-width: $tablet-breakpoint) {
   .header {
     margin-left: auto;
-    margin-right: auto;
+    margin-top: 32px;
+
     background-image: url('/src/images/header-background-img-t.png');
     // test
     background-image: image-set(
@@ -114,7 +120,7 @@
     padding-left: 16px;
     padding-bottom: 16px;
     padding-right: 16px;
-    width: 704px;
+    width: 91%;
     height: 222px;
 
     background-size: cover;
@@ -163,7 +169,7 @@
     font-weight: 400;
     line-height: 1.17;
     border-color: transparent;
-    width: 165px;
+    width: auto;
     height: 38px;
     border-width: 0px;
     padding-left: 16px;
@@ -173,6 +179,7 @@
       outline: none;
     }
   }
+
   .search-button {
     position: relative;
     width: 0px;
@@ -198,10 +205,12 @@
   }
 }
 
-@media screen and (min-width: $desktop-breakpoint) {
+// PC
+@media screen and (min-width: $tablet-breakpoint) {
   .header {
     margin-left: auto;
     margin-right: auto;
+    margin-top: 32px;
     background-image: url('/src/images/header-background-img-d.png');
     // test
     background-image: image-set(
@@ -212,7 +221,7 @@
     padding-left: 32px;
     padding-bottom: 32px;
     padding-right: 32px;
-    width: 1216px;
+    width: 95%;
     height: 316px;
 
     background-size: cover;
@@ -245,6 +254,7 @@
   }
 
   .search-form {
+    width: auto;
     display: flex;
     justify-content: left;
     align-items: center;
