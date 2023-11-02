@@ -102,3 +102,14 @@
     width: 48.75%;
   }
 }
+
+@media screen and (min-width: 1630px) {
+  .gallery__items {
+    max-width: 394px;
+  }
+  .gallery,
+  .my-library-gallery {
+    width: 95%;
+    gap: 16px;
+  }
+}

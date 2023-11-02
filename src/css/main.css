@@ -230,6 +230,16 @@ meter {
     width: 48.75%;
   }
 }
+@media screen and (min-width: 1630px) {
+  .gallery__items {
+    max-width: 394px;
+  }
+  .gallery,
+  .my-library-gallery {
+    width: 95%;
+    gap: 16px;
+  }
+}
 .loader {
   display: block;
   position: relative;
@@ -1812,6 +1822,11 @@ meter {
     position: absolute;
     width: 16px;
     height: 16px;
+  }
+}
+@media screen and (min-width: 1630px) {
+  .header {
+    width: 86%;
   }
 }
 .no-movies {
