@@ -1,5 +1,6 @@
 // NAVIGATION & BUTTONS
 .navigation {
+  max-height: 40px;
   display: flex;
   flex-wrap: wrap;
   gap: 4px;
@@ -35,9 +36,6 @@
   line-height: normal;
   text-transform: uppercase;
   text-decoration: none;
-  position: relative;
-  top: 341px;
-  left: 30px;
 }
 
 .navigation__queue {
@@ -53,9 +51,6 @@
   line-height: normal;
   text-transform: uppercase;
   text-decoration: none;
-  position: relative;
-  top: 341px;
-  left: 30px;
 }
 
 @media screen and (min-width: $tablet-breakpoint) {
@@ -73,9 +68,6 @@
     line-height: normal;
     text-transform: uppercase;
     text-decoration: none;
-    margin-left: 266px;
-    position: static;
-    top: auto;
   }
 
   .navigation__queue {
@@ -91,8 +83,6 @@
     line-height: normal;
     text-transform: uppercase;
     text-decoration: none;
-    position: static;
-    top: auto;
   }
 }
 
@@ -111,9 +101,6 @@
     line-height: normal;
     text-transform: uppercase;
     text-decoration: none;
-    margin-left: 706px;
-    position: static;
-    top: auto;
   }
 
   .navigation__queue {
@@ -228,6 +215,44 @@
   .navigation__library--from-my-library {
     background-color: #000;
     color: #ffffff;
+  }
+}
+
+// my-library breakpoints
+.my-library-buttons--2 {
+  display: none;
+}
+
+@media screen and (max-width: 425px) {
+  .my-library-buttons {
+    display: none;
+    &--2 {
+      display: inline-block;
+    }
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .my-library-buttons {
+    margin: 10px 0 0 0;
+  }
+}
+
+@media screen and (min-width: 575px) {
+  .my-library-buttons {
+    margin-left: 16%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .my-library-buttons {
+    margin-left: 39%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .my-library-buttons {
+    margin-left: 59%;
   }
 }
 
@@ -411,7 +436,7 @@
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 425px) {
   .search-form:first-child {
     order: 3;
   }
