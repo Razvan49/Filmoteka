@@ -106,6 +106,10 @@
   line-height: 16px; /* 133.333% */
 }
 .modal-movie-overview {
+  padding-right: 20px;
+  height: 100px;
+  overflow-x: hidden;
+  overflow-y: auto;
   color: #000;
   font-family: Roboto;
   font-size: 12px;
@@ -190,6 +194,9 @@
     right: 30px;
     padding-bottom: 0px;
   }
+  .modal-movie-overview {
+    height: 180px;
+  }
 }
 
 @media screen and (min-width: $desktop-breakpoint) {
@@ -236,5 +243,8 @@
     bottom: 40px;
     right: 96px;
     padding-bottom: 0px;
+  }
+  .modal-movie-overview {
+    height: 250px;
   }
 }
