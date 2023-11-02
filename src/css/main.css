@@ -1048,6 +1048,12 @@ meter {
   vertical-align: middle;
 }
 
+.main__modal__container__people a svg:hover,
+.main__modal__container__people a svg:focus {
+  background-color: #2e2e2e;
+  color: #ffffff;
+}
+
 .content {
   min-height: 100%;
   height: 100%;
@@ -1248,11 +1254,6 @@ meter {
     color: #ccc;
     border-radius: 50px;
   }
-  .main__modal__container__people svg:hover,
-  .main__modal__container__people svg:focus {
-    background-color: #2e2e2e;
-    color: #ffffff;
-  }
   .main__modal__container__people p {
     max-width: 180px;
     margin: 0;
@@ -1385,11 +1386,6 @@ meter {
     color: #ccc;
     border-radius: 50px;
   }
-  .main__modal__container__people svg:hover,
-  .main__modal__container__people svg:focus {
-    background-color: #2e2e2e;
-    color: #ffffff;
-  }
   .main__modal__container__people p {
     max-width: 180px;
     margin: 0;
@@ -1512,11 +1508,6 @@ meter {
     color: #ccc;
     border-radius: 50px;
   }
-  .main__modal__container svg:hover,
-  .main__modal__container svg:focus {
-    background-color: #2e2e2e;
-    color: #ffffff;
-  }
   .main__modal__container p {
     max-width: 180px;
     margin: 0;
@@ -1528,14 +1519,28 @@ meter {
   }
   .main__modal__container {
     width: 100%;
-    height: 55%;
+    height: 45%;
     padding: 15px;
   }
   .main__modal__container > h2 {
     margin-top: 0;
+    margin-bottom: 10px;
   }
   .main__modal__container__close-button {
     top: 20px;
+  }
+  .main__modal__container figure {
+    height: 150px;
+  }
+  .main__modal__container a svg {
+    padding: 4px;
+    height: 25px;
+    width: 25px;
+  }
+}
+@media screen and (max-width: 579px) {
+  .main__modal__container figure + div > b {
+    width: 80%;
   }
 }
 .container__content {
